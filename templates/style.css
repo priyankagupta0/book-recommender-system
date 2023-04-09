@@ -1,0 +1,275 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+}
+
+.cover {
+  width: 100%;
+  background: url("../images/sakura.gif"),
+    linear-gradient(to bottom, #00bfd8 0%, #c1f8ff 100%);
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+.opening {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("../images/branch0.png");
+  background-position: right;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+}
+.header {
+  width: 100%;
+}
+
+.head-decor {
+  height: 56px;
+  padding: 2% 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.head-text {
+  color: white;
+  font-weight: bold;
+}
+.view {
+  flex: 1;
+  text-align: right;
+}
+
+.view ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+
+.view ul li a {
+  text-decoration: none;
+  padding: 5px 20px;
+}
+
+.home {
+  background-color: white;
+  border-radius: 15px;
+  color: black;
+}
+
+.others {
+  color: white;
+  border-radius: 15px;
+  background-color: transparent;
+  transition: background-color 300ms ease, color 300ms ease;
+}
+
+.others:hover {
+  background-color: white;
+  color: black;
+}
+
+.textbox {
+  padding-left: 13%;
+  padding-top: 10%;
+}
+
+.subject {
+  width: 50%;
+}
+
+.bigtext {
+  font-size: 7rem;
+  font-weight: 700;
+  color: white;
+}
+
+.smalltext {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  border-bottom: 3px solid white;
+  padding-right: 15px;
+  padding-bottom: 30px;
+}
+
+.headpara {
+  width: 80%;
+  color: white;
+  padding-top: 30px;
+  font-size: 1.2rem;
+}
+
+.discover {
+  margin-top: 15px;
+  display: inline-block;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 5px 20px;
+  border-radius: 20px;
+  background-color: rgba(0, 152, 170, 255);
+  text-decoration: none;
+  transition: background-color 200ms ease;
+}
+
+.discover:hover {
+  background-color: #4d6a5e;
+}
+
+.headimg {
+  width: 1000px;
+}
+
+.movie-list {
+  min-height: 100vh;
+  padding: 0 10rem;
+  position: relative;
+  background: url("../images/branch1.png") left no-repeat,
+    url("../images/branch0.png") 100% 100% no-repeat;
+  overflow-x: hidden;
+}
+.list {
+  padding-top: 4%;
+}
+
+.wibu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.wibubox {
+  border: 2px solid black;
+  background-color: white;
+  /* border-radius: 10px; */
+  padding: 5px;
+  display: inline-block;
+  margin: 30px;
+  transition: box-shadow 200ms ease, transform 200ms ease;
+}
+
+.buttonimg {
+  cursor: pointer;
+  border: 2px solid black;
+  background-color: transparent;
+}
+
+.wibubox:hover {
+  box-shadow: -10px 8px #0096a9;
+  transform: translate(10px, -8px);
+}
+
+.wibuimg {
+  width: 300px;
+  height: 424px;
+  display: block;
+}
+
+.wibutext {
+  font-size: 20px;
+  display: inline-block;
+  color: black;
+  border: none;
+  background-color: transparent;
+  display: block;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  background-color: white;
+  border-radius: 4px;
+  z-index: 10;
+  min-width: 47%;
+}
+
+.modalimg {
+  position: relative;
+}
+
+.modalimg img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+  padding: 0 15px;
+}
+
+.title {
+  font-weight: bold;
+  display: inline-block;
+  font-size: 1.5rem;
+}
+
+.age {
+  display: inline-block;
+  border: 2px solid black;
+  padding: 0 5px;
+  margin-left: 5px;
+}
+
+.modal-body {
+  padding: 10px 15px;
+}
+
+.close-button {
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  left: 95%;
+  bottom: 90%;
+  background-color: transparent;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.closing {
+  border-top: 4px solid black;
+  min-height: 10vh;
+  background-color: rgba(0, 152, 170, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.closingtext {
+  padding-left: 10px;
+  padding-right: 10px;
+}
